@@ -38,6 +38,8 @@ android {
 }
 
 dependencies {
+    implementation(libs.android.ktx)
+    implementation(libs.androidx.runtime.ktx)
 }
 
 afterEvaluate {

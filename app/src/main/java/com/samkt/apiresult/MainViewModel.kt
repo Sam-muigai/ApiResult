@@ -34,11 +34,11 @@ class MainViewModel : ViewModel() {
                         quote = randomQuote,
                     )
                 }
-            }.onError { exception ->
+            }.onError { message, _ ->
                 _mainScreenState.update {
                     it.copy(
                         loading = false,
-                        errorMessage = exception.localizedMessage,
+                        errorMessage = message,
                     )
                 }
             }
